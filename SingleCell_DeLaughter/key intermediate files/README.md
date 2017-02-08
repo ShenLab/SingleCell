@@ -5,3 +5,6 @@ filename is consisted of "dataset_name" + "ab/ct (ab=TPMs, ct=counts)" + "coding
 ### file type 2: highly variable gene selected at each developmental time point
 (currently only E14.5 datasets are available)
 filename is consisted of "highVarTable"+"linear/sigmoid(fitting method)" + ".csv"
+
+### file type 3: total number of reads for each cell 
+filename is consisted of "dataset_name" + "total_reads" + ".csv"
