@@ -4,8 +4,6 @@ source("https://bioconductor.org/biocLite.R")
 #biocLite('genefilter')
 #biocLite('EBImage')
 #biocLite('statmod')
-#biocLite('topGO')
-#biocLite('org.At.tair.db')
 library( DESeq )
 library( genefilter )
 library( EBImage )
@@ -95,8 +93,18 @@ number_less_five_per_cell<-apply(data, 2, FUN=rare_genes_finder, 5, FALSE)
 
 
 #total #of >0 >5 genes versus total mapped reads
+total_genes<-dim(data)[1]
 num_larger_than_zero<-total_genes - number_zero_genes_per_cell
 num_larger_than_five<-total_genes - number_less_five_per_cell
+
+
+#self-define x, y labels and main title:
+xlab_text<-"log10(total number of reads)"
+ylab_text<-"ratio of mapped reads"
+main_text<-"E14.5_All log10(total reads) vs. ratio of mapped reads"
+plot(cbind(log10(total_reads), ratio), pch=19, cex = 0.5, xlab=xlab_text, ylab= ylab_text, main=main_text)
+
+
 
 
 #filter the cells based on total number of reads and the ratio of mapped reads
