@@ -33,7 +33,7 @@ does multidimensional scaling on normalized dataset, and plot with perfect genes
 
 
 
-### total_raeds_counts.py 
+### total_reads_counts.py 
 counts total number of reads for each cell
 
 
