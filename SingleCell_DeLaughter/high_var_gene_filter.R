@@ -255,7 +255,7 @@ write.csv(highVarTable, "highVarTable_linear.csv")
 
 ###################################################################
 #Filtering only high variant genes for further analysis           #
-#                        STRATEGY 1                               #
+#                        STRATEGY 2                             #
 #Plot the log10(mean) vs # of expressing cells points             #
 #Fit the points with sigmoid function                             #
 # define the points fell under the curve as highly variable genes #
