@@ -38,4 +38,9 @@ counts total number of reads for each cell
 
 
 
+### cv^2_vs_mean_plot_setup.txt
+setting and parameters used for fitting
+
+
+
 ### only normal cells are included
