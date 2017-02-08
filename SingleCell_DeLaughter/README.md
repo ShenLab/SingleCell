@@ -23,11 +23,12 @@ http://ftp.ensembl.org/pub/current_gtf/mus_musculus/
 
 
 
-### mds_plots does multidimensional scaling on normalized dataset, and plot with perfect genes markers for each cell type
+### mds_plots.R does multidimensional scaling on normalized dataset, and plot with perfect genes markers for each cell type
 
 
 
 ### total_raeds_counts.py counts total number of reads for each cell
+
 
 
 ### only normal cells are included
