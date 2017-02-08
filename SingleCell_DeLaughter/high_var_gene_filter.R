@@ -102,6 +102,7 @@ num_larger_than_five<-total_genes - number_less_five_per_cell
 xlab_text<-"log10(total number of reads)"
 ylab_text<-"ratio of mapped reads"
 main_text<-"E14.5_All log10(total reads) vs. ratio of mapped reads"
+#Plot log10(total_reads) vs ratio of mapped reads for QC
 plot(cbind(log10(total_reads), ratio), pch=19, cex = 0.5, xlab=xlab_text, ylab= ylab_text, main=main_text)
 
 
