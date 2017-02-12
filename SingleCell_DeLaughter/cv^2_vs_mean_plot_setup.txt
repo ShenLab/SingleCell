@@ -1,7 +1,12 @@
 ################E9.5
+NO MT FILTERING
+
 cv2_E9.5 > 1
 centering_para<-10
 fit <- glmgam.fit(cbind(a0=5, altilde=centering_para/means_E9.5[useForFit]), cv2_E9.5[useForFit])
+
+WITH MT FILTERING
+centering_para<- 2.3
  
 plot( NULL, xaxt="n", yaxt="n",
       log="xy", xlim = c(1e-3, 1e4), ylim = c(0.8, 10^2.1),
