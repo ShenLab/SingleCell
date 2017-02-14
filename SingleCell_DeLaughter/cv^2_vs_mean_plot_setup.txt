@@ -140,10 +140,10 @@ fitmodel <- nls(y~a/(1 + exp(-b * (x-c))), start=list(a=500,b=1,c=2))
 #################################################################################
 
 
-##################ALL Ventricular CMs (Based on All Samples CountCluster results)
+##################ALL Ventricular CMs (Based on All Samples CountCluster results, and >6 threshold on CM) 
 cv2_P7 > 1
-centering_para<- -1.2
-fit <- glmgam.fit(cbind(a0=10, altilde=centering_para/means_All_cms[useForFit]), cv2_All_cms[useForFit])
+centering_para<- 4.2
+fit <- glmgam.fit(cbind(a0=5, altilde=centering_para/means_All_cms[useForFit]), cv2_All_cms[useForFit])
 plot( NULL, xaxt="n", yaxt="n",
       log="xy", xlim = c(1e-3, 1e4), ylim = c(0.75, 10^2.1),
       xlab = "mean est. count (normalized to size factor)", ylab = "squared coefficient of variation (CV^2)",
