@@ -82,6 +82,19 @@ t2gene_transform_name_mismatch<-function(sample_info, folder_name){
   return ()
 }
 
+
+
+#################################################
+#Function to calculate FPKM from tximport result
+#fpkm is defined as Fragnments per kilobase of "genes?" per millions of mapped reads
+#because counts for each genes are in reads, thus what was calcualted is RPKM
+#and FPKM should be 1/2 of RPKM provided it is pair ended
+#################################################
+
+fpkm_calculator<-function(txi, out_fname){
+  fpkm<-(txi$counts / txi$length ) / colSums(txi$counts) *10^9 * 0.5
+  write.csv(fpkm, out_fname)
+}
 #Function Ends#
 #################################################################
 
